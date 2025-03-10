@@ -1,0 +1,15 @@
+-- START TRANSACTION or BEGIN or BEGIN WORK 
+-- COMMIT
+-- ROLLBACK 
+
+SET AUTOCOMMIT = OFF; 
+
+START TRANSACTION; 
+
+INSERT INTO users (id, username) VALUES (1, "Mason"); 
+
+UPDATE users SET email = 'mschrader1@una.edu' WHERE id = 1; 
+
+COMMIT;
+
+ROLLBACK;
